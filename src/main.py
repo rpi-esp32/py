@@ -11,7 +11,10 @@ def orientation(a):
     return f"hello {typeof(a)},  = {a}"
 
 #add(create_proxy(callback))
-
+#
+#
+#
+#
 print (span.value)
 ###
 span.write(" new strings") 
