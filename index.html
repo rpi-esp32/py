@@ -40,6 +40,14 @@
 	creating a PWA application.
 </p>
 
+	<div id="target"></div>
+	<div id="1"></div>
+	<div id="2"></div>
+	<div id="3"></div>
+	<div id="4"></div>
+	<div id="5"></div>
+	
+	
 
 <script>
 	
@@ -70,6 +78,21 @@
 	
 <py-script src="src/main.py">
 </py-script>
+
+<py-script>
+pyscript.write('1', "this is from in-line pyscript")
+</py-script>
+
+<py-repl std-out="output" std-err="errors"></py-repl>
+
+    <div>
+      <b>Output</b><hr>
+      <div id="output"></div>
+    </div>
+<div>
+      <b>Errors and Warnings</b><hr>
+      <div id="errors"></div>
+</div>
 	
 </body>
 </html>
