@@ -35,7 +35,8 @@ self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
 //        console.log(fetchEvent.request);
         console.log("inside maurice respondwith");
-        caches.match(fetchEvent.request).then(res => {return res || fetch(fetchEvent.request)})
+        return fetch(fetchEvent.request);
+//        caches.match(fetchEvent.request).then(res => {return res || fetch(fetchEvent.request)})
 //        .catch(err => console.log("Cache fetch error: ", err));
     );
 });
