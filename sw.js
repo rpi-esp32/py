@@ -14,6 +14,10 @@ self.addEventListener("install", installEvent => {
 //               .then(r => {}).catch(err => console.log("Error caching item", err))
 //        }).catch(err => console.log("Error opening cache", err))
 //    );
+    
+    installEvent.awaitUntil(caches.open(staticCacheName).then(cache => {cache.addAll(assests);}))
+    .then(r=>{console.log("cache installed by Maurice")});
+    
     console.log("finished maurice cache");
 });
 
