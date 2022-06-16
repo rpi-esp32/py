@@ -12,7 +12,7 @@ console.log("after maurice assets printed");
 self.addEventListener("install", installEvent => {
     console.log("installing maurice cache");
     event.waitUntil(installEvent.waitUntil(caches.open(staticCacheName))
-    .then(cache => {cache.addAll(assests)}););
+    .then(cache => {cache.addAll(assests)}).then(r => {}).catch(err => console.log("Error caching item", err)););
 //    then(cache => {cache.addAll(assets);}));
 //               .then(r => {}).catch(err => console.log("Error caching item", err))
 //        }).catch(err => console.log("Error opening cache", err))
@@ -41,7 +41,7 @@ self.addEventListener("install", installEvent => {
 self.addEventListener("fetch", fetchEvent => {
     console.log("fetching maurice cache");
     installEvent.waitUntil(caches.open(staticCacheName))
-    .then(cache => {cache.addAll(assests)});
+    .then(cache => {cache.addAll(assests)}).then(r => {}).catch(err => console.log("Error caching item", err));
     console.log("fetching maurice success");
 //    fetchEvent.respondWith(
 //        console.log(fetchEvent.request);
