@@ -2,7 +2,7 @@ from js import add
 from pyodide import create_proxy
 # import numpy as np
 
-span = document.querySelector("span")
+span = Element("direction")
 
 def callback(a):
     span.innerText = orientation(a)
