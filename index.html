@@ -64,7 +64,7 @@
 		console.log('serviceWorker is in NAVIGATOR');
 		await navigator
 				.serviceWorker
-				.register('ssw.js');
+				.register('/py/sw.js');
 		}
 		catch (e) {
 		console.log('SW registration failed');
