@@ -1,21 +1,23 @@
+
 const staticCacheName = "pwa";
 
-const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
-// const assets = ["/", "/index.html", "src/main.py"]
+const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"]
 
-console.log(assets);
+self.addEventListener("install", installEvent => {
+    installEvent.waitUntil(
+        caches.open(staticCacheName).then(cache => {
+            cache.addAll(assets).then(r => {
+                console.log("Cache assets downloaded");
+            }).catch(err => console.log("Error caching item", err))
+            console.log(`Cache ${staticCacheName} opened.`);
+        }).catch(err => console.log("Error opening cache", err))
+    )
+})
 
-self.addEventListener("install", function (e) {e.waitUntil(caches.open(staticCacheName).then(function (cache) {return cache.addAll(assets);}));});
-
-// self.addEventListener("install", function (e) {});
-// self.addEventListener("fetch", function (event) {});
-
-self.addEventListener("fetch", function (event) {
-console.log(event.request.url);
-
-event.respondWith(
-	caches.match(event.request).then(function (response) {
-	return response || fetch(event.request);
-	})
-);
-});
+self.addEventListener("fetch", fetchEvent => {
+    fetchEvent.respondWith(
+        caches.match(fetchEvent.request).then(res => {
+            return res || fetch(fetchEvent.request)
+        }).catch(err => console.log("Cache fetch error: ", err))
+    )
+})
