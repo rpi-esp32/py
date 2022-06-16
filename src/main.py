@@ -12,6 +12,6 @@ def orientation(a):
 
 #add(create_proxy(callback))
 
-print (span.innerHTML)
-span.innerHTML = " new strings"
-print (span.innerHTML)
+print (span.element.innerHTML)
+span.element.innerHTML = " new strings"
+print (span.element.innerHTML)
