@@ -9,7 +9,7 @@ console.log(assets);
 
 self.addEventListener("install", installEvent => {
     console.log("installing maurice cache");
-    installEvent.waitUntil(caches.open(staticCacheName).then(cache => {cache.addAll(assets);}));
+//    installEvent.waitUntil(caches.open(staticCacheName).then(cache => {cache.addAll(assets);}));
 //               .then(r => {}).catch(err => console.log("Error caching item", err))
 //        }).catch(err => console.log("Error opening cache", err))
 //    );
