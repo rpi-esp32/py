@@ -13,5 +13,5 @@ def orientation(a):
 #add(create_proxy(callback))
 
 print (span.value)
-span.value = " new strings"
+span.write() = " new strings"
 print (span.value)
