@@ -4,10 +4,10 @@ from pyodide import create_proxy
 
 span = document.querySelector("span")
 
-def callback(x, y, z):
-    span.innerText = orientation(x, y, z)
+def callback(a):
+    span.innerText = orientation(a)
 
-def orientation(x, y, z):
-    return f"hello {x}"
+def orientation(a):
+    return f"hello {typeof(a)}"
 
 add(create_proxy(callback))
