@@ -2,10 +2,10 @@ from js import add
 from pyodide import create_proxy
 # import numpy as np
 
-span = Element("direction")
+span = Element("m")
 
 def callback(a):
-    span.innerText = orientation(a)
+    span.value = orientation(a)
 
 def orientation(a):
     return f"hello {typeof(a)},  = {a}"
