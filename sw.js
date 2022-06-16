@@ -4,7 +4,7 @@ const staticCacheName = "pwa";
 const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
 
 console.log("this is maurice from sw.js"); 
-console.log(assets.slice(0,2));
+console.log(assets.toString());
 console.log("after maurice assets printed");
 
 
