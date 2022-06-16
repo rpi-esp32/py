@@ -8,6 +8,6 @@ def callback(x, y, z):
     span.innerText = orientation(x, y, z)
 
 def orientation(x, y, z):
-    return f"{x=}, {y=}, {z=}"
+    return f"hello {x}"
 
 add(create_proxy(callback))
