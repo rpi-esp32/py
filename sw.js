@@ -1,7 +1,8 @@
 
 const staticCacheName = "pwa";
 
-const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
+//const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
+const assets = ["/index.html", "src/main.js", "src/main.py"];
 
 console.log("this is maurice from sw.js"); 
 console.log(assets.toString());
@@ -39,10 +40,13 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
     console.log("fetching maurice cache");
+    installEvent.waitUntil(caches.open(staticCacheName).console.log("download maurice"))
+    .then(cache => {cache.addAll(assests)});
+    console.log("fetching maurice success");
 //    fetchEvent.respondWith(
 //        console.log(fetchEvent.request);
 //        console.log("inside maurice respondwith");
-        return fetch(fetchEvent.request);
+//        return fetch(fetchEvent.request);
 //        caches.match(fetchEvent.request).then(res => {return res || fetch(fetchEvent.request)})
 //        .catch(err => console.log("Cache fetch error: ", err));
 //    );
