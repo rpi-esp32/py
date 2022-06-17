@@ -1,4 +1,4 @@
-const staticCacheName = "pwa";
+const nN = "pwa";
 
 //const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
 const assets = ["/index.html", "src/main.js", "src/main.py"];
@@ -20,8 +20,8 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
     console.log("EVENT FETCH");
-    fetchEvent.waitUntil(caches.open(staticCacheName)
-    .then((cache) => {cache.addAll(["/","/index.html"]);}));
+    fetchEvent.waitUntil(caches.open("pwa")
+    .then((c) => {c.addAll(["/","/index.html"]);}));
     console.log("FETCH COMPLETED");
 
 });
