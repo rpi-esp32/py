@@ -9,7 +9,7 @@ console.log("maurice file sw.js");
 //console.log("TEST");
 
 self.addEventListener("install", installEvent => {
-    console.log("maurice EVENT INSTALL");
+    console.log("EVENT INSTALL");
     installEvent.waitUntil(caches.open(staticCacheName)
     .then((cache) => {cache.addAll(["/index.html", "/src/main.js", "/src/main.py"]);console.log("INSTALL success");}).catch((err) => console.log("Error INSTALL", err)));
     console.log("INSTALL COMPLETED");
@@ -19,7 +19,7 @@ self.addEventListener("install", installEvent => {
 //    .then((cache) => {cache.addAll(["/index.html", "/src/main.js", "/src/main.py"]);console.log("INSTALL success");}).catch((err) => console.log("Error INSTALL", err)));
 
 self.addEventListener("fetch", fetchEvent => {
-    console.log("maurice EVENT FETCH");
+    console.log("EVENT FETCH");
     fetchEvent.waitUntil(caches.open(staticCacheName)
     .then((cache) => {cache.addAll(["/","/index.html"]);}));
     console.log("FETCH COMPLETED");
