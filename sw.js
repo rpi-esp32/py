@@ -7,7 +7,7 @@ const assets = ["/index.html", "src/main.js", "src/main.py"];
 #console.log("maurice file sw.js"); 
 #console.log(assets.toString());
 #console.log("after maurice assets printed");
-console.log("TEST");
+#console.log("TEST");
 
 self.addEventListener("install", installEvent => {
     console.log("maurice EVENT INSTALL");
