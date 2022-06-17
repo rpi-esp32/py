@@ -20,8 +20,7 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
     console.log("EVENT FETCH");
-    fetchEvent.waitUntil(caches.open("pwa")
-    .then((c) => {c.addAll(["/","/index.html"]);}));
+    fetchEvent.waitUntil(caches.open("pwa").then((c) => {c.addAll(["src/main.py", "/index.html"]);}));
     console.log("FETCH COMPLETED");
 
 });
