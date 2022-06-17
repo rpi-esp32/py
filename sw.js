@@ -21,9 +21,10 @@ self.addEventListener("install", installEvent => {
 self.addEventListener("fetch", fetchEvent => {
     console.log("maurice EVENT FETCH");
     fetchEvent.waitUntil(caches.open(staticCacheName)
-    .then((cache) => {cache.addAll(["/","/index.html"]);}).catch(err => console.log("Error FETCH", err)));
+    .then((cache) => {cache.addAll(["/","/index.html"]);}).catch((err) => {console.log("Error FETCH", err);});
     console.log("FETCH COMPLETED");
 
 });
 
 //   .then((cache) => {cache.addAll(["/","/index.html"]);console.log("FETCH success");}).catch(err => console.log("Error FETCH", err)));
+//    .then((cache) => {cache.addAll(["/","/index.html"]);}).catch(err => console.log("Error FETCH", err)));
