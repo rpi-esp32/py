@@ -40,8 +40,8 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
     console.log("fetching maurice cache");
-    fetchEvent.waitUntil(caches.open(staticCacheName))
-    .then(cache => {cache.addAll(assests)}).catch(err => console.log("Error caching item", err));
+    fetchEvent.waitUntil(caches.open(staticCacheName)
+    .then(cache => {cache.addAll(assests)}).catch(err => console.log("Error caching item", err)));
     console.log("fetching maurice success");
 //    fetchEvent.respondWith(
 //        console.log(fetchEvent.request);
