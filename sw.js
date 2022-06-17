@@ -12,7 +12,7 @@ self.addEventListener("install", installEvent => {
     console.log("maurice EVENT INSTALL");
     installEvent.waitUntil(caches.open(staticCacheName)
     .then((cache) => {cache.addAll(["/index.html", "/src/main.js", "/src/main.py"]);console.log("INSTALL success");}).catch((err) => console.log("Error INSTALL", err)));
-    console.log("INSTALL COMPLETED"));
+    console.log("INSTALL COMPLETED");
     
 });
 
