@@ -1,9 +1,8 @@
-
 const staticCacheName = "pwa";
 
 //const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
-const assets = ["/index.html", "src/main.js", "src/main.py"];
-
+#const assets = ["/index.html", "src/main.js", "src/main.py"];
+#
 #console.log("maurice file sw.js"); 
 #console.log(assets.toString());
 #console.log("after maurice assets printed");
