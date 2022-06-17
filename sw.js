@@ -1,8 +1,8 @@
 
-//const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
-const assets = ["/py/index.html", "/py/src/main.js", "/py/src/main.py"];
+const assets = ["/py/", "/py/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "/py/src/main.py", "/py/src/main.js"];
+//const assets = ["/py/index.html", "/py/src/main.js", "/py/src/main.py"];
 
-console.log("maurice file sw.js using ASSETS"); 
+console.log("maurice file sw.js FULL ASSETS"); 
 
 
 self.addEventListener("install", installEvent => {
