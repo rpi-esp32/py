@@ -15,8 +15,9 @@ self.addEventListener("install", installEvent => {
 
 self.addEventListener("fetch", fetchEvent => {
     console.log("EVENT FETCH");
-    fetchEvent.waitUntil(caches.open("pwa").then((c) => {return c.addAll(["/py/src/main.py", "/py/index.html"]);}));
+    fetchEvent.respondWith(caches.match(fetchEvent.request).then(res=>{return res || fetch(fetchEvent.request)}));
     console.log("FETCH COMPLETED");
 
 });
 
+//    fetchEvent.waitUntil(caches.open("pwa").then((c) => {return c.addAll(["/py/src/main.py", "/py/index.html"]);}));
