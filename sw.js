@@ -1,6 +1,6 @@
 
 //const assets = ["/", "/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "src/main.py", "src/main.js"];
-const assets = ["/index.html", "src/main.js", "src/main.py"];
+const assets = ["/py/index.html", "/py/src/main.js", "/py/src/main.py"];
 
 console.log("maurice file sw.js using ASSETS"); 
 
