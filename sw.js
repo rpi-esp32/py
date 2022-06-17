@@ -11,7 +11,7 @@ console.log("maurice file sw.js");
 self.addEventListener("install", installEvent => {
     console.log("EVENT INSTALL");
     installEvent.waitUntil(caches.open("pwa")
-    .then((cache) => {cache.addAll(["/index.html", "/src/main.js", "/src/main.py"]);console.log("INSTALL success");}).catch((err) => console.log("Error INSTALL", err)));
+    .then((cache) => {cache.addAll(["/index.html", "/src/main.js", "/src/main.py"]);}).catch((err) => console.log("Error INSTALL", err)));
     console.log("INSTALL COMPLETED");
     
 });
